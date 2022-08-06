@@ -111,7 +111,7 @@ text-decoration: underline;
     visibility: hidden;
     color: #fff;
     border: 1px solid #000;
-    width: 240px;
+    width: 260px;
     background-color: #555;
     color: #fff;
     border-radius: 25px;
@@ -120,6 +120,9 @@ text-decoration: underline;
     bottom: 125%;
     margin-left: -125px;
     padding: 20px;
+    @media (min-width: 630px) {
+        width: 200px;
+    }
 
     &::after {
         content: "";
@@ -141,7 +144,7 @@ text-decoration: underline;
     visibility: hidden;
     color: #fff;
     border: 1px solid #000;
-    width: 240px;
+    width: 260px;
     background-color: #555;
     color: #fff;
     border-radius: 25px;
@@ -149,6 +152,12 @@ text-decoration: underline;
     // z-index: 1;
     bottom: 24px;
     padding: 20px;
+    @media (min-width: 630px) {
+        width: 200px;
+    }
+    @media (min-width: 630px) {
+        width: 200px;
+    }
     &::after {
         content: "";
         position: absolute;

@@ -11,7 +11,7 @@ startButton.addEventListener("click", function (e) {
     startPage.style.cssText = `display: none;`;
     headerPage.style.cssText = `display: block`;
   } else {
-    startPage.style.cssText = `@media (min-width: 992px) {
+    startPage.style.cssText = `@media (max-width: 992px) {
         display: none;}`;
   }
   e.stopPropagation();
@@ -29,7 +29,7 @@ terms.addEventListener("click", function (e) {
   if (terms.classList.contains("pops")) {
     termsText.style.cssText = `visibility: visible;`;
   } else {
-    termsText.style.cssText = `@media (min-width: 992px) {
+    termsText.style.cssText = `@media (max-width: 992px) {
       display: none;}`;
   }
   e.stopPropagation();
@@ -40,8 +40,36 @@ privacy.addEventListener("click", function (e) {
   if (privacy.classList.contains("pops")) {
     privacyText.style.cssText = `visibility: visible;`;
   } else {
-    privacyText.style.cssText = `@media (min-width: 992px) {
+    privacyText.style.cssText = `@media (max-width: 992px) {
       display: none;}`;
   }
   e.stopPropagation();
+});
+
+// hide popup
+
+document.addEventListener("click", function (e) {
+  if (
+    e &&
+    e.target.className !== ".item--terms" &&
+    e.target.className !== ".item--text"
+  ) {
+    terms.classList.remove("pops");
+
+    termsText.style.cssText = `@media (max-width: 992px) {
+  display: none;}`;
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (
+    e &&
+    e.target.className !== ".item--privacy" &&
+    e.target.className !== ".item--text2"
+  ) {
+    privacy.classList.remove("pops");
+
+    privacyText.style.cssText = `@media (max-width: 992px) {
+  display: none;}`;
+  }
 });
