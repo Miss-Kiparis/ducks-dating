@@ -5,36 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/styles/normilize.css">
+    <link rel="stylesheet" href="/dist/styles/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,200&display=swap"
+        rel="stylesheet">
+
     <title>Duck's Dating app</title>
 </head>
 
 <body>
     <!-- order render optimisation for the overflow\banner page, not a mistake -->
     <section class="overflow__page">
-        <img class="overflow__page__mascot mascot" src="./src/pics/maskot.jpg" alt="duck-mascot">
-        <h1 class="overflow__page--logo logo">Duck-dating</h1>
+        <img class="overflow__page__mascot mascot" src="./src/pics/mascot.png" alt="duck-mascot">
+        <h1 class="overflow__page--logo logo">Duck-Dating</h1>
         <p class="overflow__page--description">Duck with Stranger, Make new Friends</p>
         <a class="overflow_page--start__button start__button" href="#">Let's get started</a> <!-- button -->
 
     </section>
 
     <header class="header__page">
-        <section class="header__page--wrapper topWrapper">
-
-
-
-
-
-
-
-
-
-
-            <h1 class="topWrapper__logo"><a href="#">Duck-dating</a></h1>
-
+        <section class="header__page--wrapper headerWrapper">
+            <img class="header__page--mascot mascot" src="./src/pics/mascot.png" alt="duck-mascot">
+            <p class="header__page--signin">Sign in to continue</p>
+            <a class="header__page--login__btn login__btn facebook__btn" href="#">Continue with Facebook</a>
+            <a class="header__page--login__btn login__btn phone__btn" href="#">Use phone number</a>
+            <p class="header__page--login">or login with</p>
+            <div class="header__socials socials">
+                <a class="socials__item socials__insta" href="#"><img class="socials__item--pic"
+                        src="./dist/pics/insta.png" width="45px" alt="insta"></a>
+                <a class="socials__item socials__google" href="#"><img class="socials__item--pic"
+                        src="./dist/pics/google.png" width="45px" alt="google"></a>
+                <a class="socials__item socials__twitter" href="#"><img class="socials__item--pic"
+                        src="./dist/pics/twitter.png" width="45px" alt="twitter"></a>
+            </div>
+            <div class="header__page--instruction instruction">
+                <a class="instruction__item item--terms" href="#">Terms of service
+                    <p class="item--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae error
+                        officia debitis
+                        aspernatur odit cumque est, voluptatum perspiciatis autem ipsum a eligendi eos earum dolor esse
+                        eaque impedit magni ab!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi eius fugiat aspernatur minima,
+                        inventore, voluptas cupiditate enim, nemo quis mollitia blanditiis odit labore illum dignissimos
+                        corporis eum fuga assumenda doloremque. Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit.Id tempora numquam distinctio hic sapiente consequuntur ab delectus necessitatibus
+                        odit,
+                        pariatur, earum quasi cumque in temporibus quaerat aspernatur omnis optio explicabo.</p>
+                </a>
+                <a class="instruction__item item--privacy" href="#">Privacy policy
+                    <p class="item--text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae error
+                        officia debitis
+                        aspernatur odit cumque est, voluptatum perspiciatis autem ipsum a eligendi eos earum dolor esse
+                        eaque impedit magni ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+                        magnam delectus laborum nemo et pariatur maxime soluta eius hic ex. Aperiam iusto, quod aliquam
+                        nemo molestiae necessitatibus earum repellendus impedit! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Nostrum velit temporibus nam praesentium adipisci placeat a at cum ipsum
+                        pariatur, nulla eos tempore soluta error sit odit nemo eaque vitae?Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
+                </a>
+            </div>
         </section>
     </header>
 
+    <script src="./dist/js/script.min.js">
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: 'your-app-id',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v14.0'
+            });
+        };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
 
 </html>

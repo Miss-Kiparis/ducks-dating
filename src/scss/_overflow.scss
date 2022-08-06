@@ -1,0 +1,65 @@
+.overflow__page {
+    background-color: $theme-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+
+        @media (min-width: 481px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    //   @media (min-width: 992px) {
+       
+    //   }
+    
+}
+
+.mascot {
+    @include mascotStarter;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 15px;
+    color: $text-color;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 33px;
+    font-family: $font-stack;
+
+    @media (min-width: 481px) {
+        font-size: 48px;
+    }
+
+}
+
+.overflow__page--description {
+    margin: 50px;
+    text-align: center;
+    color: $text-color;
+    font-family: $font-stack;
+    font-size: 23px;
+
+    @media (min-width: 481px) {
+        font-size: 28px;
+    }
+
+}
+
+.start__button {
+ color: $theme-color;
+ background-color: $text-color;
+ @include startButton;
+
+ &:hover{
+    background-color: $theme-color;
+    color: $text-color;
+    transition: .2s linear;
+}
+}
+ .overflow__page + .start__button:visited{
+    display: none;
+ }
